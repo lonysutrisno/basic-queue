@@ -1,0 +1,13 @@
+[Unit]
+Description=Basic queue service using go as cron job
+After=network.target
+ 
+[Service]
+Type=simple
+User=root
+Restart=on-failure
+WorkingDirectory=/home/lony/go/src/basic-queue
+ExecStart=/home/lony/go/src/basic-queue/basic-queue
+
+[Install]
+WantedBy=multi-user.target
